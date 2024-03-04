@@ -3,9 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+
     <title>Vanilla Weather Forecast</title>
   </head>
   <body>
-    Vanilla Weather
+    <div class="weather">
+      <header>
+        <form class="search-form" id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city.."
+            required
+            id="search-form-input"
+            class="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-button" />
+        </form>
+      </header>
+      <main>
+        <div class="weather-data">
+          <div>
+            <h1 class="weather-city" id="city"></h1>
+            <p class="weather-details">
+              <span id="time"></span>
+              <span id="condition"></span>
+              <br />
+              Humidity: <strong id="humidity"></strong>, Wind:
+              <strong id="knots"></strong>
+            </p>
+          </div>
+          <div class="weather-temp-container">
+            <div id="icon"></div>
+            <div class="weather-temp" id="temperature"></div>
+            <div class="weatehr-unit">°C</div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        Coded by
+        <a href="https://github.com/ShariXan" target="_blank">
+          S. Abdul Razak
+        </a>
+        hosted on
+        <a href="https://github.com/ShariXan/pluswk8weather" target="_blank">
+          Github
+        </a>
+        and
+        <a href="https://pluswk8weather.netlify.app/" target="_blank">
+          Netlify</a
+        >
+      </footer>
+    </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
